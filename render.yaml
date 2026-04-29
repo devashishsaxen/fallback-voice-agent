@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: tom-voice-recruiter
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn test_deepgram:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: CAMB_API_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_PHONE_NUMBER
+        sync: false
+      - key: PUBLIC_URL
+        sync: false

@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.log
+.pytest_cache/
+.vscode/
+temp_audio/
+*.sqlite3
+*.sqlite3-*
